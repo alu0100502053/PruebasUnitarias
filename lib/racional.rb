@@ -1,11 +1,12 @@
 # Implementar en este fichero la clase para crear objetos racionales
 
-require "./gcd.rb"
+require "./lib/gcd.rb"
 
 class Fraccion
 	attr_accessor :n, :d
 	
 	def initialize(n,d)
+      raise RuntimeError unless n.is_a? Integer and d.is_a? Integer
 		@n, @d = n, d
 	end
 
@@ -64,13 +65,13 @@ class Fraccion
    end
 end
 
-a = Fraccion.new(13,3)
-b = Fraccion.new(46,5)
-c = a.suma(b)
-puts c.to_s
-d = a.resta(b)
-puts d.to_s
-e = a.producto(b)
-puts e.to_s
-f = a.division(b)
-puts f.to_s
+# a = Fraccion.new(13,3)
+# b = Fraccion.new(46,5)
+# c = a.suma(b)
+# puts c.to_s
+# d = a.resta(b)
+# puts d.to_s
+# e = a.producto(b)
+# puts e.to_s
+# f = a.division(b)
+# puts f.to_s

@@ -1,6 +1,6 @@
 # Implementar en este fichero la clase para crear objetos racionales
 
-require "./lib/gcd.rb"
+require_relative "gcd.rb"
 
 class Fraccion
 	attr_reader :n, :d
@@ -47,13 +47,17 @@ class Fraccion
    end
 end
 
-# a = Fraccion.new(13,3)
-# b = Fraccion.new(46,5)
-# c = a.suma(b)
-# puts "Suma: " + c.to_s
-# d = a.resta(b)
-# puts "Resta: " + d.to_s
-# e = a.producto(b)
-# puts "Producto: " + e.to_s
-# f = a.division(b)
-# puts "Division: " + f.to_s
+system("clear")
+a = Fraccion.new(13,3)
+puts "Fraccion 1: " + a.to_s
+b = Fraccion.new(46,5)
+puts "Fraccion 2: " + b.to_s
+puts
+c = a.suma(b)
+puts "Suma: " + c.to_s
+d = a.resta(b)
+puts "Resta: " + d.to_s
+e = a.producto(b)
+puts "Producto: " + e.to_s
+f = a.division(b)
+puts "Division: " + f.to_s
